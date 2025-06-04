@@ -1,1 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>O nas - Linux for Newbies</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f7f6;
+      color: #333;
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+    }
+    .btn {
+      background-color: #27ae60;
+      border: none;
+      color: white;
+      padding: 12px 25px;
+      font-size: 16px;
+      margin: 15px 5px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #2ecc71;
+    }
+    .content-box {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>O firmie Linux for Newbies</h1>
+  <p>Witaj! Jesteśmy zespołem pasjonatów Linuksa, którzy chcą pomagać początkującym użytkownikom w poznawaniu tego systemu.</p>
 
+<center>
+  <div>
+    <button class="btn" onclick="showInfo('historia')">Nasza Historia</button>
+    <button class="btn" onclick="showInfo('misja')">Misja</button>
+    <button class="btn" onclick="showInfo('wartosci')">Wartości</button>
+  </div>
+</center>
+
+  <div class="content-box" id="infoBox">
+    Kliknij jeden z przycisków, aby dowiedzieć się więcej.
+  </div>
+
+  <script>
+    const infoContent = {
+      historia: `Firma Linux for Newbies została założona w 2022 roku przez grupę entuzjastów systemu Linux. 
+      Naszym celem było stworzenie łatwo dostępnych materiałów edukacyjnych dla osób, które dopiero zaczynają swoją przygodę z Linuksem.`,
+      
+      misja: `Naszą misją jest demistyfikacja systemu Linux oraz umożliwienie każdemu łatwego startu, niezależnie od wcześniejszego doświadczenia technicznego. 
+      Wierzymy, że Linux może być przyjazny dla wszystkich!`,
+      
+      wartosci: `- Edukacja: Stawiamy na jasne, proste i praktyczne nauczanie.\n
+      - Wspólnota: Wierzymy w siłę społeczności i wzajemną pomoc.\n
+      - Otwartość: Promujemy otwarte oprogramowanie i dzielenie się wiedzą.\n
+      - Pasja: Kochamy to, co robimy i chcemy się tym dzielić.`
+    };
+
+    function showInfo(section) {
+      let box = document.getElementById('infoBox');
+      box.textContent = infoContent[section];
+    }
+  </script>
+</body>
+</html>
