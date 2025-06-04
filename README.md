@@ -8,4 +8,4 @@ LNfN is a company that wants to help new users
 - [x] no payment
 - [x] made with pasion
 
-for more information please check our website: 
+for more information please check our website: https://lnfn-website.github.io/About-us/index.html
